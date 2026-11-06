@@ -1,0 +1,210 @@
+@font-face {
+  font-family: Archivo;
+  src: url(assets/archivo-latin.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+:root {
+  --night: #0b0811;
+  --paper: #f5efe9;
+  --pink: #f28fbd;
+  --acid: #f4d35e;
+  --sans: Archivo, Helvetica, Arial, sans-serif;
+  --plum: #241020;
+  --lavender: #d8c6e5;
+  --blush: #ecc5d1;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+body { font-family: var(--sans); font-weight: 400; line-height: 1.6; }
+::selection { color: #1d0d19; background: #f4d35e; }
+html { scrollbar-color: #ad668a #170d17; }
+a { text-underline-offset: .3em; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid #b55482;
+  outline-offset: 5px;
+}
+header a:focus-visible, .hero a:focus-visible, .hero button:focus-visible,
+.watch :focus-visible, .live :focus-visible, footer :focus-visible {
+  outline-color: var(--acid);
+}
+button { -webkit-tap-highlight-color: transparent; }
+button:active:not(.record-pic):not(.video-thumb):not(.premiere-thumb) { opacity: .8; }
+.navwrap { height: 88px; }
+.brand { width: 116px; }
+.brand img { height: 80px; }
+header nav a, .button, .textlink, .menu, .sleeve, .record-links a,
+.foot-links a, .video-type, .insta-label, .premiere-label, .premiere-action,
+.scene-motion, #close, figcaption, .post-info strong {
+  font-family: var(--sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .085em;
+}
+header nav a { font-size: 12px; }
+.hero h1 { letter-spacing: -.04em; }
+.hero-copy > p {
+  font-family: var(--serif);
+  font-size: clamp(23px, 2.5vw, 38px);
+  text-transform: uppercase;
+  letter-spacing: -.025em;
+}
+.release-date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 17px;
+  margin-top: 16px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+.release-caption { color: #eb9fbd; }
+.release-date time { font-variant-numeric: tabular-nums; }
+.button { min-height: 48px; padding-inline: 24px; font-size: 12px; }
+.hero-actions { margin-top: 26px; }
+.sleeve { font-size: 11px; min-height: 40px; }
+.sleeve-edge { color: #dbc4cf; }
+.section { padding-block: clamp(58px, 5.5vw, 94px); }
+.section h2 {
+  margin: 0;
+  font-size: clamp(46px, 6vw, 88px);
+  line-height: 1.03;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  word-spacing: .025em;
+}
+.section h2 span { color: #a42c59; }
+.section-head { align-items: flex-end; }
+.textlink { font-size: 11px; min-height: 40px; line-height: 1.5; }
+.section-head .textlink { margin-bottom: 4px; }
+.music { background: var(--paper); color: #25131f; }
+.records { margin-top: 38px; }
+.record-pic { box-shadow: 0 8px 22px #29132224; }
+.record h3 { font-weight: 800; font-size: clamp(25px, 2.3vw, 36px); letter-spacing: -.035em; }
+.record .date { font: 500 11px/1.5 var(--sans); color: #765266; letter-spacing: .08em; }
+.record-links { gap: 20px; }
+.record-links a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding-block: 10px; font-size: 11px; }
+.watch { background: var(--plum); }
+.watch .section-head h2 span, .live h2 span, footer h2 span { color: var(--pink); }
+.watch .textlink { color: #f1b6d1; }
+#one-night-video { margin-top: 36px; }
+.premiere-thumb { background: #170a15; }
+.premiere-copy > strong { letter-spacing: -.035em; margin-bottom: 0; }
+.premiere-label { display: block; margin: 10px 0 18px; font-size: 11px; }
+.premiere-action { font-size: 12px; }
+.scene-motion { font-size: 11px; min-height: 44px; }
+.video-meta { padding-block: 17px 14px; border-color: #6b3e59; }
+#video-feature .video-meta strong { font-weight: 700; font-size: clamp(21px, 1.8vw, 28px); letter-spacing: -.025em; text-transform: uppercase; }
+.video-type { display: block; margin-top: 4px; color: #e8b5cc; font-size: 11px; line-height: 1.4; }
+.duration { color: #edc5d8; }
+#video-related .textlink { font-size: 11px; color: #efb9d2; }
+.moments { margin-top: 46px; padding-top: 28px; border-color: #6b3e59; }
+.moments h3 { font-weight: 700; font-size: 22px; letter-spacing: .015em; text-transform: uppercase; }
+.moments p { max-width: 65ch; color: #e5d1dd; line-height: 1.65; }
+#moment-grid .video-meta strong { font-weight: 700; font-size: 18px; letter-spacing: -.015em; text-transform: uppercase; }
+.band { grid-template-columns: 1.15fr 1fr; background: var(--lavender); color: #301326; }
+.band figure img { box-shadow: 0 12px 30px #3b183029; }
+.band figcaption { align-items: center; gap: 15px; margin-top: 12px; font: 600 10px/1.5 var(--sans); letter-spacing: .075em; }
+.band-intro h2 { font-size: clamp(39px, 4.2vw, 66px); line-height: 1.08; }
+.band-intro em { color: #7a1b48; }
+.band-intro .members { margin: 24px 0 12px; font: 700 11px/1.8 var(--sans); letter-spacing: .065em; }
+.band .textlink { color: #6f1641; }
+.stay { background: var(--blush); color: #301322; }
+.stay h2 span { color: #9e2357; }
+.stay .textlink { color: #731b40; }
+#posts { margin-top: 38px; gap: 28px; }
+.post img { aspect-ratio: 1.12; }
+.post-info { min-height: 44px; margin-top: 11px; gap: 8px 14px; }
+.post-info strong { font-size: 13px; font-weight: 700; line-height: 1.5; letter-spacing: .035em; }
+.post-info .insta-label { color: #6f2948; font-size: 10px; white-space: nowrap; }
+.live { background: #351225; border-top: 1px solid #5a263f; }
+.live h2 { max-width: 10ch; font-size: clamp(45px, 5.6vw, 80px); }
+.live #events { max-width: 360px; }
+.live p { color: #efdae5; line-height: 1.7; }
+.live .textlink { color: var(--acid); }
+footer { background: var(--night); border-color: #503040; }
+footer h2 { font-size: clamp(52px, 6.5vw, 96px); }
+.foot-top { align-items: center; }
+.foot-top p { font-size: 16px; color: #e9d5e0; }
+.foot-links { border-color: #503040; margin-top: 44px; }
+.foot-links a { font-size: 11px; min-height: 40px; display: inline-flex; align-items: center; gap: 5px; }
+.foot-last { font-size: 11px; color: #d8bbcb; }
+dialog { border-color: #97647f; background: #1d0d1b; padding: 24px; }
+.dialog-head h2 { font-family: var(--sans); font-weight: 700; font-size: 18px; letter-spacing: -.015em; text-transform: uppercase; }
+#close { font-size: 11px; padding: 10px 0 10px 15px; }
+#dialog-body { line-height: 1.65; }
+#dialog-body a, #dialog-body summary { font-size: 13px; font-weight: 600; text-transform: uppercase; }
+#dialog-body a { display: inline-flex; align-items: center; gap: 5px; min-height: 40px; }
+#dialog-body summary { min-height: 44px; padding-block: 10px; }
+.band figcaption a, .foot-last a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 900px) {
+  .navwrap nav { gap: 16px; }
+  .navwrap nav a { font-size: 11px; }
+  .brand { width: 92px; }
+  .band { grid-template-columns: 1fr; gap: 32px; }
+  .band figure { max-width: 650px; }
+  .band-intro h2 { max-width: 20ch; font-size: clamp(36px, 5.6vw, 58px); }
+  #video-feature { gap: 20px; }
+  .video-type { font-size: 10px; }
+  #moment-grid article { grid-template-columns: 40% 1fr; }
+}
+@media (max-width: 640px) {
+  .navwrap { height: 68px; }
+  .brand { width: 82px; }
+  .brand img { height: 62px; }
+  .menu { font-size: 11px; }
+  .section { padding-block: 48px; }
+  .section h2 { font-size: clamp(39px, 10vw, 60px); }
+  .section-head { gap: 12px; flex-wrap: wrap; }
+  .section-head .textlink { max-width: none; font-size: 11px; text-align: left; margin: 0; }
+  .hero h1 { font-size: clamp(76px, 24vw, 148px); }
+  .hero-copy > p { font-size: clamp(20px, 5.7vw, 30px); }
+  .release-date { font-size: 11px; gap: 6px 12px; margin-top: 13px; }
+  .release-caption { font-size: 11px; }
+  .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
+  .hero-actions .button { padding-inline: 10px; gap: 8px; font-size: 11px; min-height: 48px; }
+  .sleeve { font-size: 11px; min-height: 44px; }
+  #progress { font-size: 11px; }
+  .sleeve-edge { font-size: 9px; }
+  .records { margin-top: 28px; }
+  .record { grid-template-columns: 43% 1fr; gap: 18px; border-color: #c7acb8; }
+  .record h3 { font-size: clamp(22px, 5.8vw, 32px); }
+  .record .date { font-size: 10px; }
+  .record-links { gap: 0 12px; }
+  .record-links a { font-size: 11px; min-height: 44px; }
+  .premiere-copy { padding: 20px; }
+  .premiere-copy > strong { font-size: 46px; }
+  .premiere-label { font-size: 10px; }
+  .premiere-action { font-size: 11px; }
+  .scene-motion { min-height: 44px; font-size: 11px; }
+  #video-feature { gap: 28px; }
+  #video-feature .video-meta strong { font-size: 24px; }
+  .video-type { font-size: 11px; }
+  .moments h3 { font-size: 20px; }
+  #moment-grid { gap: 22px; }
+  #moment-grid .video-meta strong { font-size: 16px; }
+  .band-intro h2 { font-size: clamp(30px, 8.5vw, 48px); max-width: 20ch; }
+  .band figcaption { font-size: 11px; gap: 10px; }
+  .band-intro .members { font-size: 10px; letter-spacing: .04em; }
+  .stay h2 { font-size: clamp(33px, 8.7vw, 58px); }
+  #posts { gap: 24px 16px; margin-top: 26px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .post:first-child { grid-column: 1 / -1; }
+  .post:first-child img { aspect-ratio: 16 / 10; }
+  .post-info { flex-wrap: wrap; align-items: flex-start; }
+  .post-info strong { font-size: 12px; }
+  .post-info .insta-label { font-size: 10px; }
+  .live h2 { font-size: clamp(41px, 10.7vw, 62px); }
+  footer h2 { font-size: clamp(46px, 12vw, 68px); }
+  .foot-links { gap: 8px 22px; }
+  .foot-links a { font-size: 11px; }
+  dialog { padding: 16px; }
+}
+@media (max-width: 360px) {
+  .hero-actions { grid-template-columns: 1fr; }
+  .hero-actions .button { justify-content: center; }
+  .record { grid-template-columns: 43% 1fr; gap: 13px; }
+  .record-links { gap: 0; flex-direction: column; align-items: flex-start; }
+}@media(max-width:640px){.premiere-copy>strong{font-size:clamp(36px,11vw,46px)}}
