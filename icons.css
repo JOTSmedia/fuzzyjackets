@@ -1,0 +1,22 @@
+.ui-sprite {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ui-icon {
+  width: 1.08em;
+  height: 1.08em;
+  display: inline-block;
+  vertical-align: -.14em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.button .ui-icon, .menu-icon { width: 16px; height: 16px; }
+.round-play .ui-icon { width: .9em; height: .9em; margin-left: .1em; }
+.sleeve .cross { width: 14px; height: 14px; }
+.edge-mid .ui-icon { width: 20px; }
